@@ -1,0 +1,29 @@
+CC = clang++
+CPP = -std=c++98
+FLAGS = -Wall -Werror -Wextra
+
+NAME = crappy
+
+SRC = PhoneBook.class.cpp
+HDR = PhoneBook.class.hpp
+
+OBJ_DIR 	=	objects
+OBJ_SRC		=	.
+OBJ = $(SRC:.cpp=.o)
+
+.PHONY: all clean fclean re $(NAME)
+
+$(NAME): $(OBJS)
+	$(CC) $(FLAGS) $(CPP) $(SRC) -I $(HDR) $< -o $@
+
+$(OBJS): $(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp $(HDR) | $(OBJ_DIR)
+	$(CC) $(FLAGS) $(CPP) -c  $< -o $@
+all: $(NAME)
+
+clean:
+	@rm -rf $(OBJ)
+
+fclean: clean
+	@rm -rf $(NAME)
+
+re: fclean all
