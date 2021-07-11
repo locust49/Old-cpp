@@ -18,6 +18,7 @@ class PhoneBook
 
 		int compare_command(std::string cmd);
 		int index;
+		int indexTotal;
 };
 
 #endif

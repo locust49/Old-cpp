@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include "Tools.class.hpp"
 #include "Contact.class.hpp"
 
 Contact::Contact(void)
@@ -11,6 +12,8 @@ void	Contact::CREATE_contact()
 {
 	std::cout << "first name: ";
 	std::cin >> this->firstname;
+	if (this->firstname.empty())
+		return ;
 	std::cout << "last name: ";
 	std::cin >> this->lastname;
 	std::cout << "nickname: ";
@@ -23,9 +26,11 @@ void	Contact::CREATE_contact()
 
 void	Contact::SHOW_contact()
 {
-	std::cout << setprecision(10) << this->firstname << " | ";
-	std::cout << setprecision(10) << this->lastname << " | ";
-	std::cout << setprecision(10) << this->nickname << std::endl;
+	Tools tool;
+
+	std::cout << std::setw(10) << tool.ft_strlimit(this->firstname, 10, '.') << "|";
+	std::cout << std::setw(10) << tool.ft_strlimit(this->lastname, 10, '.') << "|";
+	std::cout << std::setw(10) << tool.ft_strlimit(this->nickname, 10, '.') << std::endl;
 }
 
 Contact::~Contact(void)

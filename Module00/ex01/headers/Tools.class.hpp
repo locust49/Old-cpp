@@ -9,6 +9,8 @@ class Tools
 		~Tools(void);
 
 		int ft_atoi(std::string str);
+		int ft_strlen(std::string str);
+		std::string ft_strlimit(std::string str, int limit, char replacechar);
 };
 
 #endif
