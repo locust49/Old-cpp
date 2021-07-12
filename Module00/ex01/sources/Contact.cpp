@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
-#include "Tools.class.hpp"
-#include "Contact.class.hpp"
+#include "Tools.hpp"
+#include "Contact.hpp"
 
 Contact::Contact(void)
 {
@@ -22,6 +22,15 @@ void	Contact::CREATE_contact()
 	std::cin >> this->phonenumber;
 	std::cout << "darkest secret: ";
 	std::cin >> this->darkestsecret;
+}
+
+void	Contact::SHOW_contact_byId()
+{
+	std::cout << "first name: " << this->firstname << std::endl;
+	std::cout << "last name: " << this->lastname << std::endl;
+	std::cout << "nickname: " << this->nickname << std::endl;
+	std::cout << "phone number: " << this->phonenumber << std::endl;
+	std::cout << "darkest secret: " << this->darkestsecret << std::endl;
 }
 
 void	Contact::SHOW_contact()

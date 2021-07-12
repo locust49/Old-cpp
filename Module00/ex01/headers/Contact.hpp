@@ -1,5 +1,5 @@
-#ifndef CONTACT_CLASS_HPP
-# define CONTACT_CLASS_HPP
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
 class Contact
 {
@@ -16,6 +16,7 @@ class Contact
 
 		void CREATE_contact();
 		void SHOW_contact();
+		void SHOW_contact_byId();
 };
 
 #endif

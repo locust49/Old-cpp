@@ -1,5 +1,5 @@
 #include <iostream>
-#include <PhoneBook.class.hpp>
+#include <Phonebook.hpp>
 
 int		main(void)
 {
@@ -16,8 +16,11 @@ int		main(void)
 		if (operation == 0)
 			return (0);
 		command.clear();
-		std::cout << "Choose a command (ADD|SEARCH|EXIT) : ";
-		std::cin >> command;
+		if (operation == 1)
+		{
+			std::cout << "Choose a command (ADD|SEARCH|EXIT) : ";
+			std::cin >> command;
+		}
 	}
 	return(0);
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
-#include "Tools.class.hpp"
-#include "PhoneBook.class.hpp"
+#include "Tools.hpp"
+#include "Phonebook.hpp"
 
 PhoneBook::PhoneBook(void)
 {
@@ -44,12 +44,9 @@ void		PhoneBook::SEARCH_contact_byId()
 	id = tool.ft_atoi(input_id);
 	while ((id <= 0 || id > 8) || id > this->indexTotal)
 	{
-		
 		std::cout << "None existant !" << std::endl;  
 		std::cout << "Enter a valid index of contact: ";
 		std::cin >> input_id;
-		std::cout << input_id << std::endl;
-		//infinite loop
 		if (input_id.empty())
 			return ;
 		id = tool.ft_atoi(input_id);
@@ -57,8 +54,7 @@ void		PhoneBook::SEARCH_contact_byId()
 	}
 	if (id <= this->indexTotal && id > 0)
 	{
-		std::cout << std::setw(10) << id << "|";
-		(this->contacts[id - 1]).SHOW_contact();
+		(this->contacts[id - 1]).SHOW_contact_byId();
 		return ;
 	}
 }
@@ -80,7 +76,7 @@ void		PhoneBook::SEARCH_contact()
 
 void		PhoneBook::EXIT_phonebook()
 {
-	std::cout << "bye" << std::endl;
+	std::cout << "Phonebook exited." << std::endl;
 }
 
 int		PhoneBook::compare_command(std::string cmd)

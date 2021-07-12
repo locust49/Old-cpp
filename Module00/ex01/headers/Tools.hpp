@@ -1,5 +1,5 @@
-#ifndef TOOLS_CLASS_HPP
-# define TOOLS_CLASS_HPP
+#ifndef TOOLS_HPP
+# define TOOLS_HPP
 # include <iostream>
 
 class Tools

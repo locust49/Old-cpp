@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Tools.class.hpp"
+#include "Tools.hpp"
 
 Tools::Tools(void)
 {
