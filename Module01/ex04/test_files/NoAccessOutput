@@ -1,0 +1,4 @@
+This file IS to test If I can Write in the Output file that might be generated ;)
+execute this to remove write access from the output file:
+
+	chmod 444 NoAccessOutput.replace;

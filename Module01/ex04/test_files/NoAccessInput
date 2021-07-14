@@ -1,0 +1,4 @@
+this this this this NOTTHIS this
+execute this to remove read access from the file:
+
+	chmod 222 NoAccessInput;
